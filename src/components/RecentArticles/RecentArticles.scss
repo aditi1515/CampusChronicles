@@ -1,0 +1,17 @@
+.recent-articles {
+ padding: 1rem;
+
+ h2 {
+  font-size: 2rem;
+  font-family: 'League Gothic', sans-serif;
+  margin-bottom: 1rem;
+ }
+
+ .blogs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  height: 23rem;
+  overflow-y: hidden;
+ }
+}

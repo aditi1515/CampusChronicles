@@ -1,0 +1,87 @@
+nav {
+ display: flex;
+ font-size: 1.2rem;
+ padding: 1rem 2rem;
+ background-color: #5A767D;
+ color: white;
+ .logo {
+  width: 10%;
+  display: flex;
+  align-items: center;
+ }
+
+ .nav-links {
+  width: 60%;
+  display: flex;
+  align-items: center;
+
+  ul {
+   list-style: none;
+   display: flex;
+   gap: 4rem;
+   align-items: center;
+
+   li {
+    cursor: pointer;
+
+    &:hover {
+     text-decoration: underline;
+     text-underline-offset: 5px;
+    }
+   }
+  }
+ }
+
+ .auth {
+  width: 30%;
+
+  .auth-container {
+   width: 100%;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   gap: 2rem;
+
+   button {
+    padding: 7px 2rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+     border: 2px solid black;
+     padding: 5px 30px;
+    }
+
+    &.signUp {
+     background-color: #1F3264;
+     color: white;
+
+     &:hover {
+      background-color: #071434;
+      padding: 5px 30px;
+     }
+    }
+
+   }
+
+   div {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+    }
+   }
+  }
+ }
+}
