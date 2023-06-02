@@ -1,10 +1,10 @@
 nav {
  display: flex;
- font-size: 1.2rem;
+ font-size: 1rem;
  padding: 1rem 2rem;
- background-color: #5A767D;
- color: white;
- .logo {
+ background-color: #c6dfdd;
+color: black;
+.logo {
   width: 10%;
   display: flex;
   align-items: center;
@@ -14,6 +14,7 @@ nav {
   width: 60%;
   display: flex;
   align-items: center;
+  font-family:  "Raleway", "Helvetica Neue";
 
   ul {
    list-style: none;
@@ -47,7 +48,7 @@ nav {
     background-color: transparent;
     border: none;
     outline: none;
-    color: white;
+    color: black;
     border-radius: 5px;
     cursor: pointer;
 
@@ -57,7 +58,7 @@ nav {
     }
 
     &.signUp {
-     background-color: #1F3264;
+     background-color: #c6dfdd;
      color: white;
 
      &:hover {
