@@ -7,9 +7,12 @@ const PopularBlogs = () => {
   <div className='popular-articles'>
    <h2>Popular Articles</h2>
    <div className="blogs-container">
-    {
-     blogs.slice(4, 9).map((blog, index) => <BlogCard blog={blog} />)
-    }
+    <div className="left"></div>
+    <div className="mid"></div>
+    <div className="right">
+     <div className="right-top"></div>
+     <div className="right-bottom"></div>
+    </div>
    </div>
   </div>
  )

@@ -1,0 +1,60 @@
+.banner {
+ display: flex;
+ align-items: center;
+ justify-content: space-evenly;
+ padding: 1rem 20%;
+ // border-top: 5px solid rgb(102, 101, 101);
+ // border-bottom: 5px solid rgb(102, 101, 101);
+ // background: rgb(210, 230, 228);
+ // background: linear-gradient(-45deg , rgb(243, 247, 245) 30% , #c6dfdd 73%);
+ background: url('../../assets/images/back1.svg');
+ background-size: cover;
+ background-position: bottom;
+text-align: center;
+ .left {
+  display: flex;
+  // width: 1000%;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; 
+  h2 , h4 {
+   font-family: 'Spectral', serif;
+   span{
+    color: red;
+   }
+  }
+
+  h4{
+   color: grey;
+  }
+  button {
+   padding: 8px 1.3rem;
+   border-radius: 6px;
+   width: fit-content;
+   border: 2px solid #52918E;
+   color: black;
+   outline: none;
+   font-family: "Roboto", sans-serif;
+   font-weight: 500;
+   cursor: pointer;
+
+   &:hover {
+    background-color: #52918E;
+    color: white;
+
+   }
+  }
+ }
+
+ .right {
+  height: 100%;
+  width: 10rem;
+
+  img {
+   height: 100%;
+   width: 100%;
+   object-fit: contain;
+  }
+ }
+
+}

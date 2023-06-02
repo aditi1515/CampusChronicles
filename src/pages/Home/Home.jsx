@@ -1,4 +1,6 @@
 import React from 'react'
+import Banner from '../../components/Banner/Banner'
+import EditorPick from '../../components/EditorPick/EditorPick'
 import HeroSection from '../../components/HeroSection/HeroSection'
 import PopularBlogs from '../../components/PopularBlogs/PopularBlogs'
 import RecentArticles from '../../components/RecentArticles/RecentArticles'
@@ -8,8 +10,10 @@ const Home = () => {
   <div className='home'>
    <HeroSection />
    {/* <HomeSectionImage /> */}
+   {/* <Banner /> */}
    <RecentArticles />
    <PopularBlogs />
+   <EditorPick />
   </div>
  )
 }

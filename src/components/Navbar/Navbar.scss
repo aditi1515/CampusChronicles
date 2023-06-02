@@ -1,88 +1,92 @@
 nav {
- display: flex;
- font-size: 1rem;
- padding: 1rem 2rem;
- background-color: #c6dfdd;
-color: black;
-.logo {
-  width: 10%;
   display: flex;
-  align-items: center;
- }
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  background-color: #c6dfdd;
+  color: black;
 
- .nav-links {
-  width: 60%;
-  display: flex;
-  align-items: center;
-  font-family:  "Raleway", "Helvetica Neue";
-
-  ul {
-   list-style: none;
-   display: flex;
-   gap: 4rem;
-   align-items: center;
-
-   li {
-    cursor: pointer;
-
-    &:hover {
-     text-decoration: underline;
-     text-underline-offset: 5px;
-    }
-   }
+  .logo {
+    width: 10%;
+    display: flex;
+    align-items: center;
   }
- }
 
- .auth {
-  width: 30%;
+  .nav-links {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    font-family: "Raleway", "Helvetica Neue";
 
-  .auth-container {
-   width: 100%;
-   display: flex;
-   justify-content: flex-end;
-   align-items: center;
-   gap: 2rem;
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 4rem;
+      align-items: center;
 
-   button {
-    padding: 7px 2rem;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    color: black;
-    border-radius: 5px;
-    cursor: pointer;
+      li {
+        cursor: pointer;
+        padding: 5px 12px;
 
-    &:hover {
-     border: 2px solid black;
-     padding: 5px 30px;
+        &:hover {
+          
+          background-color: black;
+          border-radius: 20px;
+          color: white;
+        }
+      }
     }
-
-    &.signUp {
-     background-color: #c6dfdd;
-     color: white;
-
-     &:hover {
-      background-color: #071434;
-      padding: 5px 30px;
-     }
-    }
-
-   }
-
-   div {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    border: 1px solid;
-    overflow: hidden;
-    cursor: pointer;
-
-    img {
-     height: 100%;
-     width: 100%;
-     object-fit: cover;
-    }
-   }
   }
- }
+
+  .auth {
+    width: 30%;
+
+    .auth-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 2rem;
+
+      button {
+        padding: 7px 2rem;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: black;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          border: 2px solid black;
+          padding: 5px 30px;
+        }
+
+        &.signUp {
+          background-color: #c6dfdd;
+          color: white;
+
+          &:hover {
+            background-color: #071434;
+            padding: 5px 30px;
+          }
+        }
+
+      }
+
+      div {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 1px solid;
+        overflow: hidden;
+        cursor: pointer;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 }
