@@ -4,87 +4,187 @@ nav {
   padding: 1rem 2rem;
   background-color: #c6dfdd;
   color: black;
+  flex-direction: column;
+  gap: 1rem;
 
-  .logo {
-    width: 10%;
+  .main {
     display: flex;
-    align-items: center;
+
+    @media screen and (max-width : 550px) {
+
+      justify-content: space-between;
+    }
+
+    .logo {
+      width: 10%;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+
+      width: 60%;
+      display: flex;
+      align-items: center;
+      font-family: "Raleway", "Helvetica Neue";
+      display: block;
+
+      @media screen and (max-width : 550px) {
+        display: none;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 4rem;
+        align-items: center;
+
+        @media screen and (max-width:830px) {
+          gap: 2rem;
+        }
+
+        @media screen and (max-width:650px) {
+          gap: 1rem;
+          justify-content: center;
+        }
+
+        li {
+          cursor: pointer;
+          padding: 5px 12px;
+
+          &.selected {
+            background-color: black;
+            border-radius: 20px;
+            color: white;
+          }
+
+          &:hover {
+            border: 1px solid black;
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+
+    .auth {
+      width: 30%;
+      @media screen and (max-width : 550px) {
+        width: 60%;
+      }
+      .auth-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 2rem;
+
+        button {
+          padding: 7px 2rem;
+          background-color: transparent;
+          border: none;
+          outline: none;
+          color: black;
+          border-radius: 5px;
+          cursor: pointer;
+
+          @media screen and (max-width:830px) {
+            padding: 5px 1rem;
+          }
+
+          @media screen and (max-width : 550px) {
+            padding: 5px 0.6rem;
+            font-size:  10px;
+          }
+
+          &:hover {
+            border: 2px solid black;
+            padding: 5px 30px;
+          }
+
+          &.signUp {
+            background-color: #c6dfdd;
+            color: white;
+
+            &:hover {
+              background-color: #071434;
+              padding: 5px 30px;
+            }
+          }
+
+        }
+
+        div {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          border: 1px solid;
+          overflow: hidden;
+          cursor: pointer;
+
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
   }
 
-  .nav-links {
-    width: 60%;
+  hr {
+    border: none;
+    height: 1px;
+    color: white;
+    background-color: white;
+    display: none;
+
+    @media screen and (max-width : 550px) {
+      display: block;
+    }
+  }
+
+  .nav-links-responsive {
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     font-family: "Raleway", "Helvetica Neue";
+    display: none;
+
+    @media screen and (max-width : 550px) {
+      display: block;
+      font-size:  12px;
+    }
 
     ul {
       list-style: none;
       display: flex;
       gap: 4rem;
       align-items: center;
+      justify-content: center;
+
+      @media screen and (max-width:830px) {
+        gap: 2rem;
+      }
+
+      @media screen and (max-width:650px) {
+        gap: 1rem;
+        justify-content: center;
+      }
 
       li {
         cursor: pointer;
         padding: 5px 12px;
 
-        &:hover {
-          
+        &.selected {
           background-color: black;
           border-radius: 20px;
           color: white;
         }
-      }
-    }
-  }
-
-  .auth {
-    width: 30%;
-
-    .auth-container {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 2rem;
-
-      button {
-        padding: 7px 2rem;
-        background-color: transparent;
-        border: none;
-        outline: none;
-        color: black;
-        border-radius: 5px;
-        cursor: pointer;
 
         &:hover {
-          border: 2px solid black;
-          padding: 5px 30px;
-        }
-
-        &.signUp {
-          background-color: #c6dfdd;
-          color: white;
-
-          &:hover {
-            background-color: #071434;
-            padding: 5px 30px;
-          }
-        }
-
-      }
-
-      div {
-        height: 40px;
-        width: 40px;
-        border-radius: 50%;
-        border: 1px solid;
-        overflow: hidden;
-        cursor: pointer;
-
-        img {
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
+          border: 1px solid black;
+          border-radius: 20px;
         }
       }
     }

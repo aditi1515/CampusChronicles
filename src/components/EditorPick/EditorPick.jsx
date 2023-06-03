@@ -7,7 +7,7 @@ const EditorPick = () => {
   const blog3 = blogs[2];
   return (
     <div className='editorPick'>
-      <h2>Editor's Articles</h2>
+      <h2>Editor's Pick</h2>
       <div className="cardContainer">
         <div className="left">
           <div className="editorPickCard">
@@ -18,7 +18,7 @@ const EditorPick = () => {
               <div className="lowerSlip">
                 <span>By</span>
                 <span>{blog1.author}</span>
-                <span>.</span>
+                
                 <span>{blog1.date}</span>
               </div>
             </div>
@@ -31,7 +31,6 @@ const EditorPick = () => {
               <div className="lowerSlip">
                 <span>By</span>
                 <span>{blog2.author}</span>
-                <span>.</span>
                 <span>{blog2.date}</span>
               </div>
             </div>
@@ -44,7 +43,7 @@ const EditorPick = () => {
               <div className="lowerSlip">
                 <span>By</span>
                 <span>{blog3.author}</span>
-                <span>.</span>
+
                 <span>{blog3.date}</span>
               </div>
             </div>
@@ -59,7 +58,7 @@ const EditorPick = () => {
               <div className="lowerSlip">
                 <span>By</span>
                 <span>{blog1.author}</span>
-                <span>.</span>
+                
                 <span>{blog1.date}</span>
               </div>
             </div>
@@ -72,7 +71,7 @@ const EditorPick = () => {
               <div className="lowerSlip">
                 <span>By</span>
                 <span>{blog2.author}</span>
-                <span>.</span>
+                <span></span>
                 <span>{blog2.date}</span>
               </div>
             </div>
@@ -85,7 +84,7 @@ const EditorPick = () => {
               <div className="lowerSlip">
                 <span>By</span>
                 <span>{blog3.author}</span>
-                <span>.</span>
+              
                 <span>{blog3.date}</span>
               </div>
             </div>

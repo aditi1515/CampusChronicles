@@ -5,6 +5,7 @@ import { blogs, user } from '../../utils/temp'
 import './BlogCard.scss'
 const BlogCard = ({ blog }) => {
  const {
+  _id,
   title,
   description,
   short_description,
@@ -14,13 +15,13 @@ const BlogCard = ({ blog }) => {
   date,
   likes,
   isApproved,
-  slug = 'tempropary-slug'
+
  } = blog
 
  const isLikedByUser = true; // check from likedBlogs array in user model 
  return (
   <div className='blogCard'>
-   <Link className='link' to={`/blog/${slug}`}>
+   <Link className='link' to={`/blog/${_id}`}>
     <div className="cover">
      <img src={cover_image} alt={title} />
     </div>

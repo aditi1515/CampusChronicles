@@ -11,6 +11,7 @@ import RecentArticles from './components/RecentArticles/RecentArticles'
 import Blog from './pages/Blog/Blog'
 import Home from './pages/Home/Home'
 import viteLogo from '/vite.svg'
+import Footer from './components/Footer/Footer'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -21,6 +22,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/blog/:slug' element={<Blog />} />
       </Routes>
+      <Footer/>
     </>
   )
 }

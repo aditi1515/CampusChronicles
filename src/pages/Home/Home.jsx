@@ -11,9 +11,9 @@ const Home = () => {
    <HeroSection />
    {/* <HomeSectionImage /> */}
    {/* <Banner /> */}
+    <PopularBlogs />
    <RecentArticles />
-   <PopularBlogs />
-   <EditorPick />
+   <EditorPick /> 
   </div>
  )
 }

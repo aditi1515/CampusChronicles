@@ -1,5 +1,6 @@
 .popular-articles {
  padding: 1rem;
+ user-select: none;
 
  h2 {
   font-size: 2rem;
@@ -13,28 +14,322 @@
   height: 50vh;
   margin: auto;
 
+  @media screen and (max-width: 550px) {
+   width: 95%;
+  }
+
+  @media screen and (max-width: 450px) {
+   width: 100%;
+  }
+
   .left {
    width: 30%;
-   border: 1px solid;
+   margin: 5px;
+   position: relative;
+   overflow: hidden;
+
+   @media screen and (max-width: 450px) {
+    margin: 0px;
+   }
+
+   @media screen and (max-width: 550px) {
+    width: 40%;
+   }
+
+   img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 0;
+
+   }
+
+   .details {
+    z-index: 10;
+    position: absolute;
+    color: white;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    transform: translateY(100vh);
+    transition: 0.3s all ease-in-out;
+
+    gap: 10px;
+
+    span,
+    p {
+     font-size: 12px;
+    }
+   }
+
+   &:hover {
+    cursor: pointer;
+
+    img {
+     filter: brightness(50%);
+    }
+
+    .details {
+     transform: translateY(0vh);
+    }
+   }
+
+   @media screen and (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .details {
+     h3 {
+      font-size: 0.8rem;
+     }
+    }
+   }
   }
 
   .mid {
    width: 50%;
-   border: 1px solid;
+   position: relative;
+   overflow: hidden;
+   margin: 5px;
+   @media screen and (max-width: 450px) {
+    margin: 0px;
+   }
+   img {
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+   }
+
+   .details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+
+    span,
+    p {
+     font-size: 12px;
+    }
+   }
+
+
+   &:hover {
+    cursor: pointer;
+
+    img {
+     height: 100%;
+     filter: brightness(50%);
+    }
+
+    .details {
+     position: absolute;
+     bottom: 0;
+     color: white;
+    }
+   }
+
+   @media screen and (max-width: 550px) {
+    width: 60%;
+   }
+
+   @media screen and (max-width: 1150px) {
+    .details {
+     gap: 5px;
+     padding: 5px;
+
+     span,
+     p {
+      font-size: 12px;
+     }
+    }
+   }
+
+   @media screen and (max-width: 650px) {
+
+
+
+    img {
+     height: 60%;
+    }
+   }
+
+   @media screen and (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .details {
+     h3 {
+      font-size: 0.8rem;
+     }
+    }
+   }
   }
 
   .right {
    width: 20%;
 
+   @media screen and (max-width: 550px) {
+    display: none;
+   }
+
    .right-top {
     height: 40%;
-    border: 1px solid;
+    position: relative;
+    margin: 5px;
+
+    img {
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+     position: absolute;
+     filter: brightness(50%);
+    }
+
+    .details {
+     position: absolute;
+     color: white;
+     display: flex;
+     flex-direction: column;
+     gap: 0.5rem;
+     padding: 20px;
+     transition: 0.3s all ease-in-out;
+     cursor: pointer;
+
+     span,
+     p {
+      font-size: 12px;
+
+     }
+
+     h3 {
+      font-size: 16px;
+     }
+    }
+
+    &:hover {
+     .details {
+      transform: scale(1.1);
+     }
+    }
+
+    @media screen and (max-width: 1400px) {
+     .details {
+
+      span,
+      p {
+       font-size: 9px;
+
+      }
+
+      h3 {
+       font-size: 12px;
+      }
+     }
+    }
+
+    @media screen and (max-width: 900px) {
+     .details {
+      padding: 5px;
+
+     }
+    }
+
+    @media screen and (max-width: 650px) {
+     .details {
+      h3 {
+       font-size: 0.7rem;
+      }
+
+      p {
+       display: none;
+      }
+     }
+    }
    }
 
    .right-bottom {
     height: 60%;
-    border: 1px solid;
+    position: relative;
+
+    img {
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+     position: absolute;
+     filter: brightness(50%);
+    }
+
+    .details {
+     position: absolute;
+     color: white;
+     display: flex;
+     flex-direction: column;
+     gap: 0.5rem;
+     bottom: 0;
+     padding: 20px;
+     transition: 0.2s all ease-in-out;
+     cursor: pointer;
+
+     span,
+     p {
+      font-size: 12px;
+
+     }
+
+     h3 {
+      font-size: 16px;
+     }
+    }
+
+    &:hover {
+     .details {
+
+
+      transform: scale(1.05) translateY(-10px);
+     }
+    }
+
+    @media screen and (max-width: 1400px) {
+     .details {
+
+      span,
+      p {
+       font-size: 9px;
+
+      }
+
+      h3 {
+       font-size: 12px;
+      }
+     }
+    }
+
+    @media screen and (max-width: 900px) {
+     .details {
+      padding: 5px;
+
+     }
+    }
+
+    @media screen and (max-width: 650px) {
+     .details {
+      h3 {
+       font-size: 0.7rem;
+      }
+
+      p {
+       display: none;
+      }
+     }
+    }
    }
+
   }
+
  }
 }
