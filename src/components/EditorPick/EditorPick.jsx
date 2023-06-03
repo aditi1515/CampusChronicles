@@ -7,7 +7,7 @@ const EditorPick = () => {
   const blog3 = blogs[2];
   return (
     <div className='editorPick'>
-      <h2>Editor's Pick</h2>
+      <h2 >Editor's Pick</h2>
       <div className="cardContainer">
         <div className="left">
           <div className="editorPickCard">

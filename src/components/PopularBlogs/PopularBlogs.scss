@@ -3,9 +3,17 @@
  user-select: none;
 
  h2 {
-  font-size: 2rem;
-  font-family: 'League Gothic', sans-serif;
-  margin-bottom: 1rem;
+  letter-spacing: 3px;
+  font-size: 2.5rem;
+  font-family: 'Libre Baskerville', serif;
+
+  @media screen and (max-width:900px) {
+   font-size: 2rem;
+  }
+
+  @media screen and (max-width:450px) {
+   font-size: 1.5rem;
+  }
  }
 
  .blogs-container {
@@ -94,9 +102,11 @@
    position: relative;
    overflow: hidden;
    margin: 5px;
+
    @media screen and (max-width: 450px) {
     margin: 0px;
    }
+
    img {
     height: 70%;
     width: 100%;

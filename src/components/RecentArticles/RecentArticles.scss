@@ -1,10 +1,20 @@
 .recent-articles {
  padding: 1rem;
-
+ display: flex;
+ flex-direction: column;
+ gap: 2rem;
  h2 {
-  font-size: 2rem;
-  font-family: 'League Gothic', sans-serif;
-  margin-bottom: 1rem;
+  letter-spacing: 3px;
+  font-size: 2.5rem;
+  font-family: 'Libre Baskerville', serif;
+
+  @media screen and (max-width:900px) {
+   font-size: 2rem;
+  }
+
+  @media screen and (max-width:450px) {
+   font-size: 1.5rem;
+  }
  }
 
  .blogs-container {
@@ -12,7 +22,7 @@
   flex-wrap: wrap;
   gap: 1rem;
   padding: 0 2rem;
-  height: 23rem;
+  height: 27rem;
   overflow-y: hidden;
   justify-content: center;
  }

@@ -12,8 +12,8 @@ const Navbar = () => {
     <div className="nav-links">
      <ul>
       <li className={location.pathname === '/' && 'selected'}><Link className='link' to={'/'}>Home</Link></li>
-      <li className={location.pathname.split('/')[1] === 'blog' && 'selected'}>Blogs</li>
-      {user.isAdmin && <li className={location.pathname === '/dashboard' && 'selected'}>DashBoard</li>}
+      <li className={location.pathname === '/blogs' && 'selected'}><Link className='link' to={'/blogs'}>Blogs</Link></li>
+      {user.isAdmin && <li className={location.pathname === '/dashboard' && 'selected'}><Link className='link' to={'/dashboard'}>DashBoard</Link></li>}
      </ul>
     </div>
 

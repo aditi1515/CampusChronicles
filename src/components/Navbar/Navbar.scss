@@ -77,7 +77,9 @@ nav {
         justify-content: flex-end;
         align-items: center;
         gap: 2rem;
-
+        @media screen and (max-width :400px){
+          gap: 1rem;
+        }
         button {
           padding: 7px 2rem;
           background-color: transparent;

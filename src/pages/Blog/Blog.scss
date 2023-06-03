@@ -4,6 +4,7 @@
  gap: 1rem;
  color: black;
 
+
  .top {
   display: flex;
   flex-direction: column;
@@ -51,10 +52,12 @@
    }
 
    .right {
-    span {
-     &:nth-of-type(1) {
+    div {
+     span {
+
       font-weight: 600;
       font-size: 0.9rem;
+
      }
     }
    }
@@ -63,8 +66,9 @@
    @media screen and (max-width:300px) {
     flex-direction: column;
     align-items: flex-start;
-    .right{
-     div{
+
+    .right {
+     div {
       margin-left: 0;
      }
     }
@@ -79,6 +83,7 @@
    @media screen and (max-width: 800px) {
     font-size: 2rem;
    }
+
    @media screen and (max-width: 300px) {
     font-size: 1.4rem;
    }
@@ -94,6 +99,7 @@
    height: 60vh;
    width: 100%;
    object-fit: cover;
+
    @media screen and (max-width: 300px) {
     height: 40vh;
    }
@@ -105,6 +111,11 @@
   color: black;
   font-family: 'Spectral', serif;
   text-align: justify;
+
+  u {
+   color: red;
+   text-decoration: none;
+  }
 
   @media screen and (max-width: 700px) {
    padding: 2rem 10%;

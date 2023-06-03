@@ -1,6 +1,7 @@
 .blogCard {
- height: 23rem;
- width: 20rem;
+ height: 26rem;
+ // min-width: 25rem;
+ width: 23%;
  display: flex;
  flex-direction: column;
  border: 1px solid rgb(184, 182, 182);
@@ -16,8 +17,9 @@
  }
 
  .link {
-  height: 23rem;
-  width: 22rem;
+  height: 26rem;
+  // min-width: 25rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   border: 1px solid rgb(184, 182, 182);
@@ -60,7 +62,7 @@
    p {
     font-size: 0.9rem;
     color: grey;
-    word-break: break-all;
+    word-break: keep-all;
    }
   }
 
