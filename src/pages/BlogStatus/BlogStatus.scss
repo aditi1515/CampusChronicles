@@ -1,0 +1,100 @@
+.blog-status {
+ padding: 1rem;
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
+ h2{
+  font-size: 2.5rem;
+  font-family: 'Libre Baskerville', serif;
+  margin-bottom: 2rem;
+
+  @media screen and (max-width:500px) {
+   font-size: 1.5rem;
+  }
+ }
+
+ p{
+  font-family: 'Libre Baskerville', serif;
+  color: red;
+ }
+ .tableWrapper {
+  margin-top: 2rem;
+  table {
+   width: 100%;
+
+   min-width: 40rem;
+   border-collapse: collapse;
+
+   thead {
+    width: 100%;
+    
+    tr {
+
+
+     th {
+      text-align: left;
+      padding: 10px 0;
+
+      &:nth-of-type(1) {
+       width: 20%;
+      }
+
+      &:nth-of-type(2) {
+       width: 50%;
+      }
+
+      &:nth-of-type(3) {
+       width: 15%;
+      }
+
+      &:nth-of-type(4) {
+       width: 15%;
+      }
+     }
+    }
+   }
+
+   tbody {
+
+    .blog-banner {
+
+     &:nth-child(odd) {
+      background-color: #daebe9;
+     }
+
+     td {
+      padding: 1rem 0;
+
+      button {
+       padding: 5px 10px;
+       background-color: rgb(36, 91, 36);
+       border: transparent;
+       outline: none;
+       border-radius: 20px;
+
+       &.emailBtn {
+        &:hover {
+         background-color: rgb(96, 152, 96);
+         color: #000;
+         cursor: pointer;
+        }
+       }
+
+       &.deleteBtn {
+        background-color: rgb(213, 23, 23);
+
+        &:hover {
+         background-color: rgb(209, 93, 93);
+         color: black;
+         cursor: pointer;
+        }
+       }
+
+       color: white;
+      }
+     }
+    }
+   }
+  }
+ }
+}

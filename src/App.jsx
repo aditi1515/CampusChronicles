@@ -1,3 +1,4 @@
+import { SnackbarProvider } from "notistack"
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import './App.scss'
@@ -10,7 +11,9 @@ import Navbar from './components/Navbar/Navbar'
 import PopularBlogs from './components/PopularBlogs/PopularBlogs'
 import RecentArticles from './components/RecentArticles/RecentArticles'
 import Blog from './pages/Blog/Blog'
+import BlogStatus from "./pages/BlogStatus/BlogStatus"
 import Blogs from './pages/Blogs/Blogs'
+import Dashboard from './pages/Dashboard/Dashboard'
 import Home from './pages/Home/Home'
 import viteLogo from '/vite.svg'
 function App() {
@@ -18,13 +21,17 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/blogs' element={<Blogs />} />
-        <Route path='/blog/:id' element={<Blog />} />
-      </Routes>
-      <Footer />
+      <SnackbarProvider>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/blogs' element={<Blogs />} />
+          <Route path='/blog/:id' element={<Blog />} />
+          <Route path='/blogs-status' element={<BlogStatus />} />
+          <Route path='/dashboard' element={<Dashboard />} />
+        </Routes>
+        <Footer />
+      </SnackbarProvider>
     </>
   )
 }

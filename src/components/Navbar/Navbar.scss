@@ -10,7 +10,7 @@ nav {
   .main {
     display: flex;
 
-    @media screen and (max-width : 550px) {
+    @media screen and (max-width : 600px) {
 
       justify-content: space-between;
     }
@@ -23,13 +23,12 @@ nav {
 
     .nav-links {
 
-      width: 60%;
+      width: 50%;
       display: flex;
       align-items: center;
       font-family: "Raleway", "Helvetica Neue";
-      display: block;
-
-      @media screen and (max-width : 550px) {
+      display: flex;
+      @media screen and (max-width : 600px) {
         display: none;
       }
 
@@ -51,7 +50,7 @@ nav {
         li {
           cursor: pointer;
           padding: 5px 12px;
-
+       
           &.selected {
             background-color: black;
             border-radius: 20px;
@@ -67,7 +66,8 @@ nav {
     }
 
     .auth {
-      width: 30%;
+      width: 40%;
+      display: flex;
       @media screen and (max-width : 550px) {
         width: 60%;
       }
@@ -140,7 +140,7 @@ nav {
     background-color: white;
     display: none;
 
-    @media screen and (max-width : 550px) {
+    @media screen and (max-width : 600px) {
       display: block;
     }
   }
@@ -153,7 +153,7 @@ nav {
     font-family: "Raleway", "Helvetica Neue";
     display: none;
 
-    @media screen and (max-width : 550px) {
+    @media screen and (max-width : 600px) {
       display: block;
       font-size:  12px;
     }

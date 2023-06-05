@@ -22,6 +22,8 @@ export const blogs = [
    "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dGVjaG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
   category: "Technology",
   author: "Karan Grover", // id of author
+  authorID: "author id",
+  authorEmail: "karan@grover.com",
   date: "20/10/2015",
   likes: 9,
   isApproved: true,
@@ -66,7 +68,7 @@ export const blogs = [
   author: "Emily Roberts",
   date: "18/09/2023",
   likes: 11,
-  isApproved: true,
+  isApproved: false,
  },
  {
   title: "The Power of Big Data Analytics",
@@ -108,7 +110,7 @@ export const blogs = [
   author: "David Miller",
   date: "14/06/2023",
   likes: 18,
-  isApproved: true,
+  isApproved: false,
  },
  {
   title: "The Future of Robotics: Innovations and Implications",
@@ -136,6 +138,6 @@ export const blogs = [
   author: "Alexandra Davis",
   date: "05/10/2023",
   likes: 12,
-  isApproved: true,
+  isApproved: false,
  },
 ];
