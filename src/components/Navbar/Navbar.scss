@@ -16,9 +16,29 @@ nav {
     }
 
     .logo {
-      width: 10%;
+      width: 15%;
+      height: 4rem;
       display: flex;
       align-items: center;
+      display: flex;
+      justify-content: center;
+      padding-right: 20px;
+      >img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+
+      @media screen and (max-width : 600px) {
+      
+      width: 25%;
+      }
+
+      @media screen and (max-width : 400px) {
+      
+        width:40%;
+        }
+  
     }
 
     .nav-links {
@@ -104,11 +124,11 @@ nav {
           }
 
           &.signUp {
-            background-color: #c6dfdd;
+         
             color: white;
-
+            background-color: #071434;
             &:hover {
-              background-color: #071434;
+            background-color: #030813;
               padding: 5px 30px;
             }
           }

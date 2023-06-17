@@ -1,8 +1,25 @@
+import axios from 'axios'
 import { useSnackbar } from 'notistack'
-import React from 'react'
-import { blogs } from '../../utils/temp'
+import React, { useEffect } from 'react'
+import { useBlogStore } from '../../store/blog.store'
+import { baseURL } from '../../utils/makeRequest'
 import './BlogStatus.scss'
 const BlogStatus = () => {
+ const getAllBlogs = useBlogStore(state => state.getAllBlogs)
+ const blogs = useBlogStore(state => state.blogs)
+ useEffect(() => {
+  const getBlogs = async () => {
+   try {
+    const { data } = await axios.get(`${baseURL}/api/blog/getMyBlogs`, { withCredentials: true });
+
+    getAllBlogs(data?.myBlogs)
+   } catch (error) {
+    console.log(error);
+   }
+  }
+
+  getBlogs()
+ }, [])
  return (
   <div className='blog-status'>
    <h2>Blog Status</h2>
@@ -11,16 +28,15 @@ const BlogStatus = () => {
     <table>
      <thead>
       <tr>
-       <th>Author</th>
        <th>Title</th>
        <th>Status</th>
-       <th>Remove</th>
+       {/* <th>Remove</th> */}
       </tr>
      </thead>
      <tbody>
       {
        blogs.map((blog, idx) => {
-        if (!blog.isApproved) return <RequestBanner blog={blog} key={idx} />
+        return <RequestBanner blog={blog} key={idx} />
        })
       }
      </tbody>
@@ -41,13 +57,12 @@ const RequestBanner = ({ blog }) => {
  }
  return (
   <tr className='blog-banner'>
-   <td>{blog.author}</td>
    <td>{blog.title.substring(0, 50)}...</td>
    <td>
-    {blog.isApproved ? 'Approved' : 'Not Approved'}
+    {blog?.isApproved ? 'Approved' : 'Not Approved'}
    </td>
    <td>
-    <button className='deleteBtn' onClick={removeBlogRequest}>Remove</button>
+    {/* <button className='deleteBtn' onClick={removeBlogRequest}>Remove</button> */}
    </td>
 
   </tr>

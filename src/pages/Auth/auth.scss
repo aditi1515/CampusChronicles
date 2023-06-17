@@ -1,0 +1,75 @@
+.register {
+
+ padding: 2rem;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 2rem;
+
+ h1 {
+  font-family: 'Libre Baskerville', serif;
+
+ }
+
+ form {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  border: 1px solid;
+  padding: 1rem;
+  gap: 1rem;
+  align-items: center;
+
+
+  .profile-img {
+   width: 4rem;
+   height: 4rem;
+  }
+
+  .input-field {
+   .input-field-input {
+    width: 25rem;
+    outline-color: #688885;
+    border-color: #688885;
+   }
+  }
+
+  .submit-btn {
+   background-color: #688885;
+   width: 25rem;
+  }
+
+  @media screen and (max-width : 475px) {
+   .input-field {
+    .input-field-input {
+     width: 18rem;
+     outline-color: #688885;
+     border-color: #688885;
+    }
+   }
+
+   .submit-btn {
+    background-color: #688885;
+    width: 18rem;
+   }
+  }
+  @media screen and (max-width : 330px) {
+   .input-field {
+    .input-field-input {
+     width: 13rem;
+     outline-color: #688885;
+     border-color: #688885;
+    }
+   }
+
+   .submit-btn {
+    background-color: #688885;
+    width: 13rem;
+   }
+  }
+ }
+
+ @media screen and (max-width : 330px) {
+  padding: 0.5rem;
+ }
+}
