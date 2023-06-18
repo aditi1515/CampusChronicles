@@ -29,7 +29,7 @@ function App() {
   useEffect(() => {
     async function getUser() {
       try {
-        const { data } = await axios.get(`http://localhost:8000/api/auth/me`, {
+        const { data } = await axios.get(`${baseURL}/api/auth/me`, {
           withCredentials: true,
         });
         if (data.success) {
