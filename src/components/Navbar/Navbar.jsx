@@ -8,6 +8,7 @@ import { user } from '../../utils/temp'
 import './Navbar.scss'
 import logo from '../../assets/videos/logoAnimation.mp4'
 import logoImg from '../../assets/images/logo.png'
+import CreateIcon from '@mui/icons-material/Create';
 const Navbar = () => {
  const location = useLocation()
 
@@ -41,6 +42,7 @@ const Navbar = () => {
       <li className={location.pathname === '/' && 'selected'}><Link className='link' to={'/'}>Home</Link></li>
       <li className={location.pathname === '/blogs' && 'selected'}><Link className='link' to={'/blogs'}>Blogs</Link></li>
       {user?.isAdmin && <li className={location.pathname === '/dashboard' && 'selected'}><Link className='link' to={'/dashboard'}>DashBoard</Link></li>}
+      {isAuthenticated && <li className={location.pathname === '/blogs' && 'selected'}><Link className='link' to={'/blog/create'}><CreateIcon/></Link></li>}
      </ul>
     </div>
 
@@ -68,6 +70,7 @@ const Navbar = () => {
      <li className={location.pathname === '/' && 'selected'}><Link className='link' to={'/'}>Home</Link></li>
      <li className={location.pathname === '/blogs' && 'selected'}><Link className='link' to={'/blogs'}>Blogs</Link></li>
      {user?.isAdmin && <li className={location.pathname === '/dashboard' && 'selected'}><Link className='link' to={'/dashboard'}>DashBoard</Link></li>}
+     {isAuthenticated && <li className={location.pathname === '/blogs' && 'selected'}><Link className='link' to={'/blog/create'}><CreateIcon/></Link></li>}
     </ul>
    </div>
    <hr />
