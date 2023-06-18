@@ -1,17 +1,33 @@
-import React from "react";
-import "./HeroSection.scss";
-import { blogs } from "../../utils/temp";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import bgImage from "../../assets/images/Yellow Dotted Portfolio Cover Page.png";
+import { baseURL } from "../../utils/makeRequest";
+import { blogs } from "../../utils/temp";
+import "./HeroSection.scss";
 const HeroSection = () => {
-  const blog = blogs[0];
+  const [blog, setBlog] = useState([])
+  useEffect(() => {
+    const getBlogs = async () => {
+      try {
+        const { data } = await axios.get(`${baseURL}/api/blog?sortBy=${'likes'}`, { withCredentials: true });
+        setBlog(data?.blogs[Math.floor(Math.random() * data?.blogs?.length)])
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    getBlogs()
+  }, [])
   const {
+    _id,
     title,
     description,
-    short_description,
+    shortDescription,
     cover_image,
     category,
     author,
-    date,
+    createdAt,
     likes,
     isApproved,
     slug = "tempropary-slug",
@@ -26,15 +42,15 @@ const HeroSection = () => {
       <div className="left">
         <div className="category-date">
           <span>{category} ,</span>
-          <span>{date}</span>
+          <span>{createdAt?.split('T')[0]}</span>
         </div>
         <h1>{title}</h1>
-        <p>{short_description}</p>
-        <button>READ MORE</button>
+        <p>{shortDescription}</p>
+        <button><Link className="link" to={`/blog/${_id}`}>READ MORE</Link></button>
       </div>
       <div className="right">
         <div className="image-container">
-          <img src={cover_image} alt="" />
+          <img src={cover_image?.url} alt="" />
         </div>
       </div>
     </div>
