@@ -89,13 +89,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
+    width: 0%;
     .details {
      h3 {
       font-size: 0.8rem;
      }
     }
    }
+
+
   }
 
   .mid {
@@ -106,6 +108,7 @@
 
    @media screen and (max-width: 450px) {
     margin: 0px;
+    width: 100%;
    }
 
    img {
@@ -145,7 +148,9 @@
 
    @media screen and (max-width: 550px) {
     width: 60%;
+    
    }
+
 
    @media screen and (max-width: 1150px) {
     .details {
@@ -179,6 +184,14 @@
      }
     }
    }
+   @media screen and (max-width: 450px) {
+    margin: 0px;
+width: 100%;
+img{
+ height: 20rem;
+}
+   }
+ 
   }
 
   .right {
