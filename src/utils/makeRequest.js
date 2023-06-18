@@ -4,4 +4,4 @@ export const makeRequest = axios.create({
  baseURL: "http://localhost:8000/",
 });
 
-export const baseURL = "http://localhost:8000";
+export const baseURL = "https://college-chronicles-backend.vercel.app";
