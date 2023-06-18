@@ -11,7 +11,7 @@ import { useAuthStore } from '../../store/user.store';
 import { baseURL } from '../../utils/makeRequest';
 import './auth.scss';
 const Login = () => {
- const [showPassword, setShowPassword] = useState(false)
+ const [showPassword, setShowPassword] = useState(true)
  const { enqueueSnackbar } = useSnackbar()
  const loginUser = useAuthStore(state => state.loginUser)
  const navigate = useNavigate()
